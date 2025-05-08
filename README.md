@@ -12,8 +12,7 @@ A stylish, mobile-responsive, and offline-ready fake AI chatbot — built with l
 - 💬 **Smart Prewritten Responses** with randomized flair
 - 💾 **Save Conversations** directly to your browser
 - 📱 **Mobile-First Design** – responsive and fluid on any screen
-- 🎨 **Stylized UI** inspired by comic games like Persona
-- ⚙️ **Toggle Modes** (Default/Persona Red-Black theme)
+- ⚙️ **Toggle Modes** (Default/Red-Black theme)
 - 🧠 Works entirely offline – no keys, no servers, just vibes
 
 ---
