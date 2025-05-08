@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+:root {
+  --bg: #fdfbfb;
+  --text: #1d3557;
+  --card-bg: white;
+  --footer: #6c757d;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1f1f1f;
+  --footer: #aaaaaa;
+}
+/* Classic clean navbar styling */
+.navbar {
+  background: #1d3557;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navlink {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.navlink:hover {
+  color: #ffc107;
+}
+
+.navlink.active {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
+}
+
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  background: #1d3557;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #457b9d;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  margin: 10px auto;
+  padding: 12px 16px;
+  border-radius: 12px;
+  transition: background 0.4s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chat-bubble.user {
+  background: #1d3557;
+  color: white;
+  text-align: right;
+}
+
+.chat-bubble.ai {
+  text-align: left;
+  color: white;
+}
+
+.bubble-default {
+  background: #457b9d;
+}
+
+.bubble-sassy {
+  background: hotpink;
+  color: white;
+  font-style: italic;
+}
+
+.bubble-poetic {
+  background: #6c5ce7;
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.5px;
+}
+
+.bubble-chill {
+  background: #00b894;
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+  color: var(--footer);
+  font-size: 0.9em;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.personality-avatar {
+  font-size: 3rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 16px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+/* Font suggestion: Bebas Neue, Anton, or Persona fonts (if imported) */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.p5-home {
+  background-color: var(--bg);
+  color: var(--text);
+  text-align: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.p5-logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  transform: skew(-5deg);
+  text-shadow: 3px 3px 0 black;
+  color: red;
+  margin-bottom: 0.3em;
+}
+
+.p5-subtitle {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: white;
+  background: black;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 red;
+  margin-bottom: 2rem;
+}
+
+.p5-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.p5-btn {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: white;
+  background: red;
+  border: 3px solid black;
+  border-radius: 10px;
+  transform: rotate(-2deg);
+  box-shadow: 4px 4px 0 black;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.p5-btn:hover {
+  transform: rotate(1deg) scale(1.05);
+  background: black;
+  color: red;
+  box-shadow: 4px 4px 0 red;
+}
+
+.p5-footer {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 4rem;
+}
+
+/* Dark mode toggle */
+body.p5-dark {
+  --bg: black;
+  --text: white;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.p5-btn {
+  animation: swingIn 0.7s ease-out both;
+}
+
+@keyframes swingIn {
+  0% { transform: rotate(-12deg) translateY(-20px); opacity: 0; }
+  100% { transform: rotate(-2deg); opacity: 1; }
+}
+.p5-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: var(--text);
+}
+
+.p5-title {
+  font-size: 2.5rem;
+  color: red;
+  text-shadow: 2px 2px black;
+  transform: skew(-5deg);
+}
+
+.p5-avatar {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.p5-select {
+  font-size: 1rem;
+  padding: 6px 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background: black;
+  color: red;
+}
+
+.p5-input {
+  width: 100%;
+  max-width: 600px;
+  border: 3px solid black;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+  transform: rotate(-1deg);
+}
+
+.p5-btn {
+  background: red;
+  border: 3px solid black;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  font-family: 'Anton', sans-serif;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 black;
+  transition: all 0.2s ease;
+}
+
+.p5-btn:hover {
+  background: black;
+  color: red;
+  box-shadow: 3px 3px 0 red;
+}
+
+.p5-suggestions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.p5-suggest {
+  font-size: 0.9rem;
+  background: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  font-weight: bold;
+}
+
+.p5-suggest:hover {
+  background: red;
+  color: white;
+}
+
+.p5-response {
+  margin-top: 2rem;
+  animation: swingIn 0.7s ease-out;
+}
+
+.p5-bubble {
+  animation: swingIn 0.5s ease both;
+  transform-origin: left;
+}
+
+@keyframes swingIn {
+  0% { transform: rotate(-12deg) translateY(-20px); opacity: 0; }
+  100% { transform: rotate(-2deg); opacity: 1; }
+}
+
+.p5-section {
+  margin-top: 3rem;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 2px solid black;
+  padding: 1rem 1.25rem;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 240px;
+  text-align: center;
+  transform: rotate(-1deg);
+  box-shadow: 3px 3px 0 var(--text);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 4px 4px 0 red;
+}
+
+.chat-bubble.user {
+  background: black;
+  color: white;
+  border: 3px solid red;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+  text-align: right;
+  transform: rotate(1deg);
+}
+
+.chat-bubble.ai {
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 0.6rem;
+  text-align: left;
+}
+
+.p5-bubble {
+  max-width: 700px;
+  margin: 1rem auto;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 red;
+  transform: rotate(-2deg);
+}
+
+.p5-navbar {
+  background-color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 5px 0 red;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.p5-navlink {
+  color: white;
+  text-decoration: none;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid red;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 red;
+  transform: rotate(-1deg);
+  transition: all 0.25s ease;
+}
+
+.p5-navlink:hover {
+  background: red;
+  color: black;
+  transform: rotate(1deg) scale(1.05);
+}
+
+.p5-navlink.active {
+  background-color: red;
+  color: black;
+  font-weight: bold;
+}
