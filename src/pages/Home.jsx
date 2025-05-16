@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div className="p5-home">
       {/* Logo */}
-      <div className="p5-logo">🤖 Mock AI Assistant</div>
-      <p className="p5-subtitle">Steal some answers… No API keys required.</p>
+      <div className="p5-logo">🤖 AI Assistant</div>
+      <p className="p5-subtitle">Give it a try.</p>
 
       {/* Menu */}
       <div className="p5-menu">
